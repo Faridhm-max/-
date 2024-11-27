@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>امتحانات الجزائر</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>امتحانات الجزائر</h1>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">حول الموقع</a></li>
+                <li><a href="#subjects">المواد</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>أكبر مكتبة للامتحانات في الجزائر</h2>
+        <p>استكشف امتحانات البكالوريا، المتوسط، والابتدائي</p>
+        <button onclick="viewExams()">ابدأ الآن</button>
+    </section>
+
+    <section id="about" class="about">
+        <h2>حول الموقع</h2>
+        <p>هذا الموقع يوفر لك كل الامتحانات مع الحلول لتساعدك في الدراسة والتحضير.</p>
+    </section>
+
+    <section id="subjects" class="subjects">
+        <h2>المواد المتوفرة</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>الرياضيات</h3>
+                <p>كل الامتحانات من الابتدائي إلى البكالوريا.</p>
+            </div>
+            <div class="card">
+                <h3>العلوم الطبيعية</h3>
+                <p>اختبر مهاراتك في هذه المادة المهمة.</p>
+            </div>
+            <div class="card">
+                <h3>اللغة العربية</h3>
+                <p>نمّ مهاراتك اللغوية مع امتحانات شاملة.</p>
+            </div>
+        </div>
+    </section>
+<section id="subjects" class="subjects">
+    <h2>المواد المتوفرة</h2>
+    <div class="grid">
+        <!-- الرياضيات -->
+        <div class="card">
+            <h3>الرياضيات</h3>
+            <p>كل الامتحانات من الابتدائي إلى البكالوريا.</p>
+            <button onclick="uploadExam('رياضيات')">رفع اختبار</button>
+            <button onclick="viewExams('رياضيات')">عرض الاختبارات</button>
+        </div>
+        <!-- العلوم الطبيعية -->
+        <div class="card">
+            <h3>العلوم الطبيعية</h3>
+            <p>اختبر مهاراتك في هذه المادة المهمة.</p>
+            <button onclick="uploadExam('علوم طبيعية')">رفع اختبار</button>
+            <button onclick="viewExams('علوم طبيعية')">عرض الاختبارات</button>
+        </div>
+        <!-- اللغة العربية -->
+        <div class="card">
+            <h3>اللغة العربية</h3>
+            <p>نمّ مهاراتك اللغوية مع امتحانات شاملة.</p>
+            <button onclick="uploadExam('لغة عربية')">رفع اختبار</button>
+            <button onclick="viewExams('لغة عربية')">عرض الاختبارات</button>
+        </div>
+        <!-- الإنجليزية -->
+        <div class="card">
+            <h3>اللغة الإنجليزية</h3>
+            <p>تحسين مهاراتك اللغوية في اللغة الإنجليزية.</p>
+            <button onclick="uploadExam('لغة إنجليزية')">رفع اختبار</button>
+            <button onclick="viewExams('لغة إنجليزية')">عرض الاختبارات</button>
+        </div>
+    </div>
+</section>
+
+<!-- نموذج رفع الملفات -->
+<div id="uploadModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">رفع اختبار</h2>
+        <form id="uploadForm">
+            <label for="examFile">اختر الملف:</label>
+            <input type="file" id="examFile" name="examFile" required>
+            <br><br>
+            <button type="submit">رفع</button>
+        </form>
+    </div>
+</div>
+    <footer id="contact">
+        <p>تواصل معنا على البريد الإلكتروني: faridhm214@dzexams.com</p>
+    </footer>
+    
+  <script src="script.js"></script>
+</body>
+</html>
